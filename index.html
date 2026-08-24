@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nurettin Mutlu TÜVER | Yazılım Mühendisi &amp; YZ Uzmanı</title>
+  <meta name="description" content="Full Stack Yazılım Mühendisi ve Yapay Zeka Uzmanı Nurettin Mutlu TÜVER'in profesyonel portföy web sitesi."/>
+  <meta name="author" content="Nurettin Mutlu TÜVER"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>"/>
+</head>
+<body data-theme="dark">
+
+  <!-- Preloader -->
+  <div id="preloader"><div class="preloader-content"><div class="preloader-logo">NMT</div><div class="preloader-bar"><div class="preloader-fill"></div></div></div></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo"><span class="logo-brackets">&lt;</span><span class="logo-text">NMT</span><span class="logo-brackets">/&gt;</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Ana Sayfa</a></li>
+        <li><a href="#about" class="nav-link">Hakkımda</a></li>
+        <li><a href="#skills" class="nav-link">Beceriler</a></li>
+        <li><a href="#projects" class="nav-link">Projeler</a></li>
+        <li><a href="#experience" class="nav-link">Deneyim</a></li>
+        <li><a href="#contact" class="nav-link">İletişim</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir"><span class="theme-icon">☀️</span></button>
+        <a href="https://github.com/MUTLU234" target="_blank" rel="noopener" class="nav-github-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge animate-fade-up" style="--delay:0.1s"><span class="badge-dot"></span>Full Stack Yazılım Mühendisi &amp; YZ Uzmanı</div>
+        <h1 class="hero-title animate-fade-up" style="--delay:0.2s">Merhaba, Ben<br/><span class="gradient-text">Nurettin Mutlu</span><br/><span class="gradient-text">TÜVER</span></h1>
+        <p class="hero-desc animate-fade-up" style="--delay:0.35s">Yapay zeka, veri bilimi ve modern web teknolojileri alanında uzmanlaşmış yazılım mühendisi. NLP'den full-stack geliştirmeye, tasarım desenlerinden cloud entegrasyonuna kadar geniş bir yelpazede çözümler üretiyorum.</p>
+        <div class="hero-typed animate-fade-up" style="--delay:0.45s">
+          <span class="typed-prefix">$ uzman_alanı: </span><span class="typed-text" id="typedText"></span><span class="typed-cursor">|</span>
+        </div>
+        <div class="hero-cta animate-fade-up" style="--delay:0.55s">
+          <a href="#projects" class="btn btn-primary"><span>Projelerimi Gör</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a href="#contact" class="btn btn-ghost">İletişime Geç</a>
+        </div>
+        <div class="hero-stats animate-fade-up" style="--delay:0.65s">
+          <div class="stat-item"><span class="stat-number" data-target="15">0</span><span class="stat-label">Proje</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number" data-target="4">0</span><span class="stat-label">Yıl Deneyim</span></div>
+          <div class="stat-divider"></div>
+          <div class="stat-item"><span class="stat-number" data-target="8">0</span><span class="stat-label">Tech Stack</span></div>
+        </div>
+      </div>
+      <div class="hero-visual animate-fade-left" style="--delay:0.4s">
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="hero-avatar">
+            <img src="https://avatars.githubusercontent.com/u/114806893?v=4" alt="Nurettin Mutlu TÜVER" loading="eager"/>
+          </div>
+          <div class="avatar-tech-badges">
+            <div class="tech-badge" style="--angle:0deg;--color:#3b82f6">Python</div>
+            <div class="tech-badge" style="--angle:51deg;--color:#f59e0b">Java</div>
+            <div class="tech-badge" style="--angle:103deg;--color:#8b5cf6">C#</div>
+            <div class="tech-badge" style="--angle:154deg;--color:#10b981">AI/ML</div>
+            <div class="tech-badge" style="--angle:206deg;--color:#ef4444">Web</div>
+            <div class="tech-badge" style="--angle:257deg;--color:#06b6d4">NLP</div>
+            <div class="tech-badge" style="--angle:309deg;--color:#ec4899">TS</div>
+          </div>
+        </div>
+        <div class="hero-code-card">
+          <div class="code-card-header">
+            <span class="code-dot" style="background:#ef4444"></span>
+            <span class="code-dot" style="background:#f59e0b"></span>
+            <span class="code-dot" style="background:#10b981"></span>
+            <span class="code-card-title">profile.py</span>
+          </div>
+          <pre class="code-card-body"><span class="ck">class</span> <span class="cc">Mutlu</span>:
+  name  = <span class="cs">"N. Mutlu TÜVER"</span>
+  role  = <span class="cs">"SWE &amp; AI Expert"</span>
+  stack = [<span class="cs">"AI"</span>, <span class="cs">"Python"</span>,
+           <span class="cs">"Java"</span>, <span class="cs">"C#"</span>]
+  open_to_work = <span class="cn">True</span> 🚀</pre>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator"><div class="scroll-arrow"></div><span>Keşfet</span></div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// hakkımda</span>
+        <h2 class="section-title">Kim Olduğum</h2>
+        <p class="section-subtitle">Teknolojinin gücünü insanlara faydalı çözümlere dönüştüren bir mühendis</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-para">Ben <strong>Nurettin Mutlu TÜVER</strong> — <strong>Full Stack Yazılım Mühendisi</strong> ve <strong>Yapay Zeka Uzmanı</strong>. Yazılım geliştirme yolculuğumda; <strong>NLP</strong>, <strong>makine öğrenmesi</strong>, <strong>derin öğrenme</strong> ve <strong>büyük dil modelleri (LLM)</strong> üzerine derinlemesine çalışmalar yaptım.</p>
+          <p class="about-para">Türkçe duygu analizi, finansal dolandırıcılık tespiti ve hukuki danışman chatbot gibi özgün projeler geliştirdim. Backend tarafında <strong>Python (Django, FastAPI)</strong>, <strong>Java</strong>, <strong>C# (.NET)</strong>; frontend tarafında <strong>Next.js</strong>, <strong>TypeScript</strong> ile çalışıyorum.</p>
+          <div class="about-info-grid">
+            <div class="info-item"><span class="info-icon">🎓</span><div><span class="info-label">Eğitim</span><span class="info-value">Bilgisayar Mühendisliği</span></div></div>
+            <div class="info-item"><span class="info-icon">📍</span><div><span class="info-label">Konum</span><span class="info-value">Türkiye</span></div></div>
+            <div class="info-item"><span class="info-icon">💼</span><div><span class="info-label">Durum</span><span class="info-value available">Açık Pozisyonlara</span></div></div>
+            <div class="info-item"><span class="info-icon">🌐</span><div><span class="info-label">GitHub</span><a href="https://github.com/MUTLU234" target="_blank" class="info-link">MUTLU234</a></div></div>
+          </div>
+          <a href="#contact" class="btn btn-primary about-cta"><span>Benimle Çalış</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+        <div class="about-highlights reveal-right">
+          <div class="highlight-card hc-ai"><div class="hc-icon">🤖</div><h3>Yapay Zeka &amp; NLP</h3><p>Türkçe duygu analizi, LLM fine-tuning, chatbot geliştirme ve finansal AI uygulamaları.</p></div>
+          <div class="highlight-card hc-backend"><div class="hc-icon">⚙️</div><h3>Backend Geliştirme</h3><p>Django, FastAPI, .NET, Redis, PostgreSQL ile ölçeklenebilir ve güvenli API'lar.</p></div>
+          <div class="highlight-card hc-frontend"><div class="hc-icon">🎨</div><h3>Full Stack Web</h3><p>Next.js 14, TypeScript, Firebase ile gerçek zamanlı platformlar.</p></div>
+          <div class="highlight-card hc-patterns"><div class="hc-icon">🏗️</div><h3>Yazılım Mimarisi</h3><p>SOLID, Design Patterns, TDD/JUnit 5 ile temiz ve sürdürülebilir kod.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// beceriler</span>
+        <h2 class="section-title">Teknoloji Stack'im</h2>
+        <p class="section-subtitle">Gerçek projelerde aktif olarak kullandığım teknolojiler</p>
+      </div>
+      <div class="skills-categories">
+        <div class="skill-category reveal-up"><div class="skill-cat-header"><span class="skill-cat-icon">🧠</span><h3>Yapay Zeka &amp; Veri Bilimi</h3></div><div class="skill-pills"><span class="skill-pill pill-hot">Python</span><span class="skill-pill pill-hot">NLP</span><span class="skill-pill pill-hot">HuggingFace</span><span class="skill-pill">TensorFlow</span><span class="skill-pill">PyTorch</span><span class="skill-pill pill-hot">LLM Fine-Tuning</span><span class="skill-pill">Scikit-Learn</span><span class="skill-pill">Pandas / NumPy</span></div></div>
+        <div class="skill-category reveal-up"><div class="skill-cat-header"><span class="skill-cat-icon">⚙️</span><h3>Backend &amp; API</h3></div><div class="skill-pills"><span class="skill-pill pill-hot">Django</span><span class="skill-pill pill-hot">FastAPI</span><span class="skill-pill pill-hot">Java Enterprise</span><span class="skill-pill pill-hot">C# / .NET</span><span class="skill-pill">REST API</span><span class="skill-pill">Redis</span><span class="skill-pill">PostgreSQL</span><span class="skill-pill">Firebase</span></div></div>
+        <div class="skill-category reveal-up"><div class="skill-cat-header"><span class="skill-cat-icon">🎨</span><h3>Frontend &amp; Mobil</h3></div><div class="skill-pills"><span class="skill-pill pill-hot">Next.js 14</span><span class="skill-pill pill-hot">TypeScript</span><span class="skill-pill">React</span><span class="skill-pill">JavaScript</span><span class="skill-pill">React Native</span><span class="skill-pill">HTML5 / CSS3</span></div></div>
+        <div class="skill-category reveal-up"><div class="skill-cat-header"><span class="skill-cat-icon">🛠️</span><h3>DevOps &amp; Araçlar</h3></div><div class="skill-pills"><span class="skill-pill pill-hot">Git / GitHub</span><span class="skill-pill">Docker</span><span class="skill-pill">CI/CD</span><span class="skill-pill">JUnit 5</span><span class="skill-pill">Maven</span><span class="skill-pill">Postman</span></div></div>
+        <div class="skill-category reveal-up"><div class="skill-cat-header"><span class="skill-cat-icon">🏗️</span><h3>Yazılım Mühendisliği</h3></div><div class="skill-pills"><span class="skill-pill pill-hot">Design Patterns</span><span class="skill-pill pill-hot">SOLID</span><span class="skill-pill">Strategy</span><span class="skill-pill">Factory</span><span class="skill-pill">Singleton</span><span class="skill-pill">TDD</span><span class="skill-pill">Clean Architecture</span></div></div>
+      </div>
+      <div class="proficiency-section">
+        <h3 class="proficiency-title">Yetkinlik Seviyeleri</h3>
+        <div class="proficiency-grid">
+          <div class="proficiency-item"><div class="prof-header"><span>Python &amp; AI/ML</span><span>92%</span></div><div class="prof-bar"><div class="prof-fill" data-width="92"></div></div></div>
+          <div class="proficiency-item"><div class="prof-header"><span>Java &amp; Design Patterns</span><span>88%</span></div><div class="prof-bar"><div class="prof-fill" data-width="88"></div></div></div>
+          <div class="proficiency-item"><div class="prof-header"><span>C# / .NET</span><span>82%</span></div><div class="prof-bar"><div class="prof-fill" data-width="82"></div></div></div>
+          <div class="proficiency-item"><div class="prof-header"><span>NLP &amp; LLM</span><span>85%</span></div><div class="prof-bar"><div class="prof-fill" data-width="85"></div></div></div>
+          <div class="proficiency-item"><div class="prof-header"><span>Next.js / TypeScript</span><span>80%</span></div><div class="prof-bar"><div class="prof-fill" data-width="80"></div></div></div>
+          <div class="proficiency-item"><div class="prof-header"><span>Django / FastAPI</span><span>86%</span></div><div class="prof-bar"><div class="prof-fill" data-width="86"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// projeler</span>
+        <h2 class="section-title">GitHub Projelerim</h2>
+        <p class="section-subtitle">Tüm repolarım — gerçek dünya problemlerine özgün çözümler</p>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">Tümü</button>
+        <button class="filter-btn" data-filter="ai">🧠 YZ/NLP</button>
+        <button class="filter-btn" data-filter="web">🌐 Web</button>
+        <button class="filter-btn" data-filter="mobile">📱 Mobil</button>
+        <button class="filter-btn" data-filter="backend">⚙️ Backend</button>
+        <button class="filter-btn" data-filter="java">☕ Java</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- 1 -->
+        <div class="project-card" data-category="ai backend"><div class="project-icon">🧠</div><h3>Document Brain AI</h3><p>.NET platformunda geliştirilmiş yapay zeka entegrasyonlu belge işleme sistemi. Dokümanları analiz eden, soru-cevap yapabilen enterprise düzeyde AI uygulaması.</p><div class="project-tech-list"><span>C#</span><span>.NET</span><span>AI</span><span>Document Processing</span></div><div class="project-footer"><span class="project-type">🏢 Enterprise</span><a href="https://github.com/MUTLU234/Document_Brain_AI" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 2 -->
+        <div class="project-card project-featured" data-category="java backend"><div class="project-featured-badge">⭐ Öne Çıkan</div><div class="project-icon">🧮</div><h3>Enterprise Java Hesap Makinesi</h3><p><strong>Strategy, Factory, Singleton</strong> tasarım desenleri, <strong>SOLID</strong> prensipleri, <strong>JUnit 5</strong> test süiti ve CI/CD pratikleri içeren enterprise düzeyde Java projesi.</p><div class="project-tech-list"><span>Java</span><span>Design Patterns</span><span>JUnit 5</span><span>SOLID</span><span>Maven</span></div><div class="project-footer"><span class="project-type">🏗️ Mimari</span><a href="https://github.com/MUTLU234/design-patterns-calculator-java" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 3 -->
+        <div class="project-card" data-category="ai"><div class="project-icon">⚖️</div><h3>Türk Hukuki Danışman Chatbot</h3><p>Türk hukuku üzerine eğitilmiş NLP tabanlı yapay zeka chatbot. Kullanıcıların hukuki sorularına Türkçe olarak doğru yanıtlar üretmektedir.</p><div class="project-tech-list"><span>Python</span><span>NLP</span><span>LLM</span><span>Chatbot</span></div><div class="project-footer"><span class="project-type">⚖️ Hukuk AI</span><a href="https://github.com/MUTLU234/Turk_Hukuki_Dan-man_Chatbot" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 4 -->
+        <div class="project-card project-featured" data-category="ai"><div class="project-featured-badge">🔥 AI</div><div class="project-icon">🎯</div><h3>Türkçe Duygu Analizi (Fine-Tuning)</h3><p>HuggingFace Transformers ile büyük dil modellerini Türkçe duygu analizi için fine-tune eden NLP projesi. Transfer öğrenme ile pozitif/negatif/nötr sınıflandırma.</p><div class="project-tech-list"><span>Python</span><span>HuggingFace</span><span>Transformers</span><span>Fine-Tuning</span></div><div class="project-footer"><span class="project-type">🧠 NLP</span><a href="https://github.com/MUTLU234/NLP_Fine_Tune_Turkish_Sentiment_Analaysis" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 5 -->
+        <div class="project-card project-featured" data-category="web"><div class="project-featured-badge">⭐ Full Stack</div><div class="project-icon">🎓</div><h3>Koachy — Online Koçluk Platformu</h3><p>Next.js 14, Firebase, TypeScript ile geliştirilmiş tam kapsamlı koçluk platformu. <strong>Gerçek zamanlı mesajlaşma</strong>, <strong>ödeme entegrasyonu</strong> ve <strong>akıllı eşleştirme</strong> algoritmaları.</p><div class="project-tech-list"><span>Next.js 14</span><span>TypeScript</span><span>Firebase</span><span>Real-time</span><span>Payment</span></div><div class="project-footer"><span class="project-type">🌐 Full Stack</span><a href="https://github.com/MUTLU234/Koachy_Online_Web_Site" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 6 -->
+        <div class="project-card" data-category="ai backend"><div class="project-icon">📈</div><h3>Algoritmik Trading Workspace</h3><p>Python tabanlı algoritmik trading çalışma ortamı. Piyasa verilerini analiz eden, strateji geliştirmeye imkân tanıyan ve otomatik işlem sinyalleri üreten framework.</p><div class="project-tech-list"><span>Python</span><span>Pandas</span><span>Algo Trading</span><span>Data Analysis</span></div><div class="project-footer"><span class="project-type">📊 Fintech</span><a href="https://github.com/MUTLU234/trading_workspace" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 7 -->
+        <div class="project-card project-featured" data-category="ai"><div class="project-featured-badge">🔥 NLP</div><div class="project-icon">🛡️</div><h3>Finansal Dolandırıcılık Tespiti</h3><p>NLP yöntemleriyle finansal işlem metinlerinde dolandırıcılık tespiti yapan gelişmiş ML sistemi. Şüpheli dil kalıplarını yüksek doğrulukla tespit eder.</p><div class="project-tech-list"><span>Python</span><span>NLP</span><span>ML</span><span>Fraud Detection</span></div><div class="project-footer"><span class="project-type">🔐 Güvenlik AI</span><a href="https://github.com/MUTLU234/Financial-Fraud-Detection-NLP" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 8 -->
+        <div class="project-card" data-category="backend"><div class="project-icon">✅</div><h3>Task Management REST API</h3><p>Python ile geliştirilmiş kapsamlı görev yönetim API'si. JWT auth, CRUD, kategori yönetimi ve önceliklendirme sistemi içeren tam featured backend servisi.</p><div class="project-tech-list"><span>Python</span><span>REST API</span><span>JWT</span><span>Backend</span></div><div class="project-footer"><span class="project-type">⚙️ API</span><a href="https://github.com/MUTLU234/task-management-api" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 9 -->
+        <div class="project-card" data-category="backend web"><div class="project-icon">🔗</div><h3>Django + Redis URL Kısaltıcı</h3><p>Django ve Redis ile yüksek performanslı URL kısaltma servisi. Redis önbellekleme ile ultra-hızlı yönlendirme ve tıklama istatistikleri takibi.</p><div class="project-tech-list"><span>Django</span><span>Redis</span><span>Caching</span><span>REST API</span></div><div class="project-footer"><span class="project-type">🌐 Web</span><a href="https://github.com/MUTLU234/django-redis-url-shortener" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 10 -->
+        <div class="project-card" data-category="mobile"><div class="project-icon">📋</div><h3>Plan Pusulası Mobil Uygulaması</h3><p>Fonksiyonel programlama paradigmasıyla geliştirilen mobil planlama ve görev takip uygulaması. Immutable state ve saf fonksiyon prensipleriyle inşa edilmiştir.</p><div class="project-tech-list"><span>Mobil</span><span>Fonksiyonel Prog.</span><span>Görev Yönetimi</span></div><div class="project-footer"><span class="project-type">📱 Mobil</span><a href="https://github.com/MUTLU234/Plan_Pusulasi_Mobile_App" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 11 -->
+        <div class="project-card" data-category="mobile web"><div class="project-icon">📖</div><h3>İngilizce-Türkçe Sözlük Uygulaması</h3><p>JavaScript/React Native ile geliştirilmiş kapsamlı İng-Tr sözlük mobil uygulaması. Hızlı arama, filtreleme ve offline çalışma desteği.</p><div class="project-tech-list"><span>JavaScript</span><span>React Native</span><span>Mobil</span></div><div class="project-footer"><span class="project-type">📱 Eğitim</span><a href="https://github.com/MUTLU234/English-Turkish-Dictionary-Mobile-Application" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 12 -->
+        <div class="project-card" data-category="web"><div class="project-icon">⚡</div><h3>Türkiye Elektrik Tüketimi Görselleştirme</h3><p>İller bazında kişi başı elektrik tüketimini interaktif haritalar ve grafiklerle görselleştiren veri odaklı web uygulaması.</p><div class="project-tech-list"><span>HTML5</span><span>JavaScript</span><span>Data Viz</span></div><div class="project-footer"><span class="project-type">📊 Veri</span><a href="https://github.com/MUTLU234/T-rkiye-ller-Baz-nda-Ki-i-Ba-Elektrik-T-ketimi-kWh-" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 13 -->
+        <div class="project-card" data-category="backend"><div class="project-icon">🔷</div><h3>C# Uygulamalar Koleksiyonu</h3><p>C# dilinde çeşitli uygulama örnekleri ve algoritma implementasyonları. OOP, LINQ, async/await ve .NET ekosistemini kapsayan başvuru kaynağı.</p><div class="project-tech-list"><span>C#</span><span>.NET</span><span>OOP</span><span>LINQ</span></div><div class="project-footer"><span class="project-type">🔷 C#</span><a href="https://github.com/MUTLU234/C-basic-apps" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+        <!-- 14 -->
+        <div class="project-card" data-category="java"><div class="project-icon">☕</div><h3>Java YouTube Eğitim Serisi</h3><p>Java'nın temel ve ileri konularını 10 video ile anlatan eğitim serisi kod örnekleri. OOP, koleksiyonlar, stream API ve daha fazlası.</p><div class="project-tech-list"><span>Java</span><span>OOP</span><span>Collections</span><span>Stream API</span></div><div class="project-footer"><span class="project-type">☕ Java</span><a href="https://github.com/MUTLU234/JAVA-YOUTUBE-" target="_blank" class="project-cta">GitHub →</a></div></div>
+
+      </div>
+      <div class="projects-footer">
+        <a href="https://github.com/MUTLU234?tab=repositories" target="_blank" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Tüm GitHub Repolarını Gör
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// deneyim</span>
+        <h2 class="section-title">Uzmanlık Alanlarım</h2>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-item reveal-up"><div class="expertise-num">01</div><div class="expertise-content"><h3>Yapay Zeka Çözümleri</h3><p>NLP, sentiment analysis, chatbot geliştirme, LLM fine-tuning ve AI entegrasyonu. Türkçe dil modelleri üzerine özel çalışmalar.</p><div class="expertise-tags"><span>NLP</span><span>LLM</span><span>Chatbot</span><span>Fine-Tuning</span></div></div></div>
+        <div class="expertise-item reveal-up"><div class="expertise-num">02</div><div class="expertise-content"><h3>Enterprise Backend</h3><p>Python (Django/FastAPI), Java, C# (.NET) ile yüksek performanslı backend API'leri. Redis, PostgreSQL ve Firebase entegrasyonu.</p><div class="expertise-tags"><span>Django</span><span>FastAPI</span><span>Redis</span><span>Microservices</span></div></div></div>
+        <div class="expertise-item reveal-up"><div class="expertise-num">03</div><div class="expertise-content"><h3>Full Stack Web</h3><p>Next.js 14 ve TypeScript ile gerçek zamanlı mesajlaşma, ödeme entegrasyonu ve akıllı eşleştirme içeren web platformları.</p><div class="expertise-tags"><span>Next.js</span><span>TypeScript</span><span>Firebase</span><span>Real-time</span></div></div></div>
+        <div class="expertise-item reveal-up"><div class="expertise-num">04</div><div class="expertise-content"><h3>Yazılım Mimarisi</h3><p>SOLID prensipleri, Strategy/Factory/Singleton desenleri ve temiz mimari ile sürdürülebilir yazılım geliştirme.</p><div class="expertise-tags"><span>SOLID</span><span>Patterns</span><span>TDD</span><span>Clean Code</span></div></div></div>
+        <div class="expertise-item reveal-up"><div class="expertise-num">05</div><div class="expertise-content"><h3>FinTech</h3><p>Algoritmik trading, finansal dolandırıcılık tespiti ve ödeme entegrasyonu alanlarında uzman uygulama geliştirme.</p><div class="expertise-tags"><span>Algo Trading</span><span>Fraud Detection</span><span>Payment</span></div></div></div>
+        <div class="expertise-item reveal-up"><div class="expertise-num">06</div><div class="expertise-content"><h3>Mobil Uygulama</h3><p>React Native ve JavaScript ile cross-platform mobil uygulamalar. Sözlük, planlama ve görev takip uygulamaları.</p><div class="expertise-tags"><span>React Native</span><span>JS</span><span>Cross-Platform</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// iletişim</span>
+        <h2 class="section-title">Birlikte Çalışalım</h2>
+        <p class="section-subtitle">Proje, iş birliği veya kariyer fırsatları için</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <h3>Merhaba! 👋</h3>
+          <p>Yazılım, yapay zeka veya herhangi bir teknoloji projesi üzerine konuşmak ister misiniz? Yeni fırsatlara her zaman açığım.</p>
+          <div class="contact-channels">
+            <a href="https://github.com/MUTLU234" target="_blank" class="contact-channel">
+              <div class="channel-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+              <div class="channel-info"><span class="channel-label">GitHub</span><span class="channel-value">github.com/MUTLU234</span></div>
+              <span class="channel-arrow">→</span>
+            </a>
+            <div class="contact-availability"><div class="avail-dot"></div><span>Şu anda yeni fırsatlara açığım</span></div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group"><label for="contact-name">Adınız</label><input type="text" id="contact-name" placeholder="Adınız Soyadınız" required/></div>
+            <div class="form-group"><label for="contact-email">E-posta</label><input type="email" id="contact-email" placeholder="ornek@mail.com" required/></div>
+            <div class="form-group"><label for="contact-subject">Konu</label><input type="text" id="contact-subject" placeholder="Proje iş birliği, kariyer fırsatı..." required/></div>
+            <div class="form-group"><label for="contact-message">Mesajınız</label><textarea id="contact-message" placeholder="Projeniz hakkında bilgi paylaşın..." rows="5" required></textarea></div>
+            <button type="submit" class="btn btn-primary form-submit"><span>Mesaj Gönder</span><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
+            <div class="form-success" id="formSuccess">✅ Mesajınız alındı!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand"><span class="footer-logo"><span class="logo-brackets">&lt;</span>NMT<span class="logo-brackets">/&gt;</span></span><p>Full Stack Yazılım Mühendisi &amp; YZ Uzmanı</p></div>
+      <div class="footer-links"><a href="#home">Ana Sayfa</a><a href="#about">Hakkımda</a><a href="#skills">Beceriler</a><a href="#projects">Projeler</a><a href="#contact">İletişim</a></div>
+      <div class="footer-social"><a href="https://github.com/MUTLU234" target="_blank" class="social-link" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg></a></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Nurettin Mutlu TÜVER. Tüm hakları saklıdır.</p></div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Yukarı çık"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+  <script src="script.js"></script>
+</body>
+</html>
