@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Form Submission (Simulation) ---
+    // --- Form Submission (AJAX) ---
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Basic validation
             let isValid = true;
-            const inputs = contactForm.querySelectorAll('input, textarea');
+            const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
@@ -299,20 +299,35 @@ document.addEventListener('DOMContentLoaded', () => {
                 const btn = contactForm.querySelector('button[type="submit"]');
                 const btnText = btn.querySelector('span');
                 
-                // Simulate loading
+                // Loading state
                 btn.disabled = true;
                 btnText.textContent = 'Gönderiliyor...';
-                
-                setTimeout(() => {
-                    formSuccess.style.display = 'block';
-                    contactForm.reset();
+
+                // Send with fetch
+                const formData = new FormData(contactForm);
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        formSuccess.style.display = 'block';
+                        contactForm.reset();
+                        btn.disabled = false;
+                        btnText.textContent = 'Mesaj Gönder';
+                        setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
+                    } else {
+                        btn.disabled = false;
+                        btnText.textContent = 'Hata Oluştu! Yeniden Deneyin.';
+                        setTimeout(() => { btnText.textContent = 'Mesaj Gönder'; }, 3000);
+                    }
+                })
+                .catch(error => {
                     btn.disabled = false;
-                    btnText.textContent = 'Mesaj Gönder';
-                    
-                    setTimeout(() => {
-                        formSuccess.style.display = 'none';
-                    }, 5000);
-                }, 1500);
+                    btnText.textContent = 'Bir hata oluştu!';
+                    setTimeout(() => { btnText.textContent = 'Mesaj Gönder'; }, 3000);
+                });
             }
         });
     }
